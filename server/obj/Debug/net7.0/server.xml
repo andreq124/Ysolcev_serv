@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>server</name>
+    </assembly>
+    <members>
+        <member name="M:server.News.NewsController.Index">
+            <summary>
+            Выводит список новостей
+            </summary>
+            <returns>Список новостей</returns>
+            <response code="200">Список новостей.</response>
+            <response code="404">Ничего нет.</response>
+        </member>
+        <member name="M:server.News.NewsController.Details(System.Nullable{System.Int32})">
+            <summary>
+            Выводит новость по id
+            </summary>
+            <param name="id"></param>
+            <response code="200">Новость по id</response>
+            <response code="404">Ничего нет.</response>
+        </member>
+        <member name="M:server.News.NewsController.Create(server.News.NewsCreateDTO)">
+            <summary>
+            Добавление новости
+            </summary>
+            <param name="item">Публикуемая статья</param>
+            <response code="201">Новость опубликована</response>
+            <response code="400">Некорректный запрос</response>
+        </member>
+        <member name="M:server.News.NewsController.Edit(System.Int32,server.News.NewsCreateDTO)">
+            <summary>
+            Изменение новости
+            </summary>
+            <param name="id">ID новости</param>
+            <param name="item">Редактиремая статья</param>
+            <response code="202">Новость изменена</response>
+            <response code="400">Некорректный запрос</response>
+            <response code="404">Запись не найдена</response>
+        </member>
+        <member name="M:server.News.NewsController.DeleteConfirmed(System.Int32)">
+            <summary>
+            Удаление новости
+            </summary>
+            <param name="id">ID записи</param>
+            <response code="202">Новость удалена</response>
+            <response code="404">Запись не найдена</response>
+        </member>
+    </members>
+</doc>
